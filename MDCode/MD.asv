@@ -38,7 +38,7 @@ PlotFile = 'image.gif';
 PlotSize = [100, 100, 1049, 895];
 ScaleV = 0;
 ScaleF = 0;
-PlotPosOnly = 1;
+PlotPosOnly = 
 
 % Simulation initiallization
 % InitThree
@@ -88,7 +88,6 @@ time(c) = 0;
 PhiTot(c) = sum(Phi) / 2;
 
 V2_0 = (Vx(Pty0in).*Vx(Pty0in) + Vy(Pty0in).*Vy(Pty0in));
-
 if nAtoms1
     V2_1 = (Vx(Pty1in).*Vx(Pty1in) + Vy(Pty1in).*Vy(Pty1in));
 else
@@ -112,6 +111,7 @@ T1(c) = KE1 / C.kb;
 T2(c) = KE2 / C.kb;
 
 if PlotPosOnly
+    fprintf('here2')
     PlotOnlyP(c,Limits);
 else
     PlotVars(c, Limits);
@@ -138,7 +138,6 @@ while t < TStop
 
         dvx(Pty0in) = Fx(Pty0in) * dt / Mass0;
         dvx(Pty1in) = Fx(Pty1in) * dt / Mass1;
-        dvx(Pty2in) = Fx(Pty2in) * dt / Mass2;
 
         Vx = Vx + dvx;
         dx(Pty0in) = Vx(Pty0in) * dt + Fx(Pty0in) * dt^2 / 2 / Mass0;

@@ -5,8 +5,8 @@ InitDist = 0.0;
 Method = 'VE'; % VE -- verlot; FD -- Forward Difference
 
 Mass0 = 14 * C.am; % Silicon
-Mass1 = 100 * C.am; % Argon
-Mass2 = 200 * C.am; % Boron
+Mass1 = 14 * C.am; % Argon
+Mass2 = 14 * C.am; % Boron
 
 
 AtomSpacing = 0.5430710e-9;
@@ -20,15 +20,14 @@ T = 30;
 % AddCircAtomicArray(5, 0, 0, 0, 0, 0, T, 0);
 
 % Add an array of particles of type 0, 1, 2
-AddEllipticAtomicArray(5, 6, 0, 0, 0, 0, 0, T, 0);
-
+AddEllipticAtomicArray(5, 5, 0, 0, 0, 0, 0, T, 1);
 % AddRectAtomicArray(10, 10, 0, 0, 0, 0, 0, T, 0);
 % vy0 = -sqrt(0.02*Ep/Mass1);
 % AddRectAtomicArray(4,4,0,12*AtomSpacing,0,vy0,0,T,1);
 Ep = 2;
 
 % Add a Particle Stream of type 0, 1, 2
-AddParticleStream(5, 0.1, 10, -pi / 2, 2, Ep * C.q_0, 5);
+AddParticleStream(5, 0.1, 10, -pi / 2, 0, Ep * C.q_0, 5);
 
 Size = 10*AtomSpacing;
 Limits = [-Size +Size -Size +Size]; % square is good

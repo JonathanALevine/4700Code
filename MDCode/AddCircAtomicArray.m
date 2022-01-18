@@ -24,12 +24,10 @@ for i = 1:2*rad
             x(nAtoms + numAtoms) = xp(i);
             y(nAtoms  + numAtoms) = yp(j);
         else
-            i
-            j
+            continue;
         end
     end
 end
-
 
 x(nAtoms + 1:nAtoms + numAtoms) = x(nAtoms + 1:nAtoms + numAtoms) + ...
     (rand(1, numAtoms) - 0.5) * AtomSpacing * InitDist + X0;
