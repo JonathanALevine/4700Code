@@ -58,8 +58,8 @@ subplot(3,2,3), plot(x(Pty0in), y(Pty0in), 'bo', 'markers',...
 hold on
 subplot(3,2,3), plot(x(Pty1in), y(Pty1in), 'go', 'markers',...
     MarkerSize,'MarkerFaceColor','g');
-subplot(3,2,3), plot(x(Pty2in), y(Pty2in), 'go', 'markers',...
-    MarkerSize,'MarkerFaceColor','g');
+subplot(3,2,3), plot(x(Pty2in), y(Pty2in), 'ro', 'markers',...
+    MarkerSize,'MarkerFaceColor','r');
 subplot(3,2,3),quiver(x, y, Vx * ScaleV, Vy * ScaleV, 0, 'r', 'linewidth', 2);
 hold off
 axis(Limits);
@@ -82,8 +82,8 @@ subplot(3, 2, 5), plot(x(Pty0in), y(Pty0in), 'bo', 'markers',...
 hold on
 subplot(3, 2, 5), plot(x(Pty1in), y(Pty1in), 'go', 'markers',...
     MarkerSize, 'MarkerFaceColor', 'g');
-subplot(3, 2, 5), plot(x(Pty2in), y(Pty2in), 'go', 'markers',...
-    MarkerSize, 'MarkerFaceColor', 'g');
+subplot(3, 2, 5), plot(x(Pty2in), y(Pty2in), 'ro', 'markers',...
+    MarkerSize, 'MarkerFaceColor', 'r');
 hold off
 title('Atoms (All)')
 xlabel('X')
@@ -93,7 +93,7 @@ subplot(3, 2, 6), plot(time, T, 'k', 'linewidth', 2);
 hold on
 subplot(3, 2, 6), plot(time, T0, 'b', 'linewidth', 2);
 subplot(3, 2, 6), plot(time, T1, 'g', 'linewidth', 2);
-subplot(3, 2, 6), plot(time, T2, 'g', 'linewidth', 2);
+subplot(3, 2, 6), plot(time, T2, 'r', 'linewidth', 2);
 hold off
 %
 xlabel('time')
